@@ -6,6 +6,8 @@ async function tempo(request, response) {
     const adviceResponseJson = await adviceResponse.json();
     const conselho = adviceResponseJson.slip.advice;
 
+    response.setHeader('Cache-Control', 's-maxage=10, stale-white-revalidate');
+
     response.json({
         date: dynamicDate.toGMTString(),
         conselho: conselho
