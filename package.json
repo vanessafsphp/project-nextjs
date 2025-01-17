@@ -1,0 +1,25 @@
+{
+  "name": "project-nextjs",
+  "version": "1.0.0",
+  "description": "Projeto em Next.js para base de estudo.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessafsphp/project-nextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanessafsphp/project-nextjs/issues"
+  },
+  "homepage": "https://github.com/vanessafsphp/project-nextjs#readme",
+  "dependencies": {
+    "next": "^15.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
