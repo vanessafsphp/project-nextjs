@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export async function getStaticPaths(params) {
     return {
         paths: [
@@ -21,7 +23,6 @@ export async function getStaticPaths(params) {
 }
 
 export async function getStaticProps(context) {
-    await delay(5000); // demora artificial
     const id = context.params.id;
 
     return {
@@ -35,15 +36,17 @@ function Produtos(props) {
     return (
         <div>
             <h1>Produtos</h1>
-            <h2>ID do Produto: {props.id}</h2>
+            <h2>ID do Produto: {props.id}</h2><br />
+
+            <Link href="/produto/2">
+                Acessar página Produto 2
+            </Link><br /><br />
+
+            <Link href="/produto/3">
+                Tente acessar página Produto 3 <br />ou digite qualquer outro número na URL
+            </Link>
         </div>
     );
 }
 
 export default Produtos;
-
-
-// Gerando um delay propositalmente, para teste.
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
